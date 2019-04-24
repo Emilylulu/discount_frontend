@@ -1,21 +1,189 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!--<div style="text-align:center">-->
+  <!--<h1>-->
+    <!--Smart Discount application-->
+  <!--</h1>-->
+<!--</div>-->
+  <div class="ui menu">
+    <div class="header item">
+      Web Application
+    </div>
+    <a class="item active">
+      Home
+    </a>
+    <a class="item">
+      Cloth
+    </a>
+    <a class="item">
+      Shoes
+    </a>
+    <a class="item">
+      Bag
+    </a>
+    <a class="item">
+      Game
+    </a>
+    <a class="item">
+      Toy
+    </a>
+    <a class="item">
+      Jewelry
+    </a>
+    <div class="right item">
 
-<router-outlet></router-outlet>
+
+      <div class="ui action input">
+        <input type="text" placeholder="Navigate to...">
+        <div class="ui button">Go</div>
+      </div>
+      <div class="ui left attached button" tabindex="0" style="height:35px; margin-left: 10px">
+      <!--<div class="hidden content">Shop</div>-->
+      <div class="visible content">
+      <i class="shop icon"></i>
+      </div>
+    </div>
+    </div>
+    <!--<i class="cart plus icon" style="width:50px"></i>-->
+  </div>
+
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <img src="/assets/image/dress.jpg" alt="Random first slide" class="fixSlideSize">
+    <div class="carousel-caption">
+      <h3>Cloth</h3>
+      <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="/assets/image/shoe.jpg" alt="Random third slide" class="fixSlideSize">
+    <div class="carousel-caption">
+      <h3>Shoes</h3>
+      <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="/assets/image/bag.jpg" alt="Random second slide" class="fixSlideSize">
+    <div class="carousel-caption">
+      <h3>Bag</h3>
+      <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="/assets/image/game.jpg" alt="Random third slide" class="fixSlideSize">
+    <div class="carousel-caption">
+      <h3>Game</h3>
+      <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="/assets/image/toy.jpg" alt="Random third slide" class="fixSlideSize">
+    <div class="carousel-caption">
+      <h3>Toy</h3>
+      <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="/assets/image/jew.jpg" alt="Random third slide" class="fixSlideSize">
+    <div class="carousel-caption">
+      <h3>Jewelry</h3>
+      <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="ui raised segment">
+  <div style="margin-left: 15px">
+  <h2>BEST DEALS</h2>
+  </div>
+  <div class="ui grid" style="margin-left: 15px">
+    <div class="row stretched">
+      <div class="eight wide column noPadding">
+        <img src="assets/image/dress.jpg" style="object-fit: fill"/>
+      </div>
+      <div class="four wide column noPadding">
+        <img src="assets/image/shoe_sq.jpg" style="object-fit: fill"/>
+      </div>
+      <div class="four wide column noPadding">
+        <img src="assets/image/bag_sq.jpg" style="object-fit: fill"/>
+      </div>
+    </div>
+    <div class="row stretched">
+      <div class="four wide column noPadding">
+        <img src="assets/image/games_sq.jpg" style="object-fit: fill"/>
+      </div>
+      <div class="four wide column noPadding">
+        <img src="assets/image/toy_sq.jpg" style="object-fit: fill"/>
+      </div>
+      <div class="eight wide column noPadding">
+        <img src="assets/image/jew.jpg" style="object-fit: fill"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!--<base>-->
+  <div class="ui raised segment" >
+    <div style="margin-left: 10px">
+    <h2>BEST SALES </h2>
+  </div>
+    <div class="ui three column wide grid" style="margin-left: 15px">
+      <div class="row">
+        <div class="column">
+          <img src="/assets/image/dress_sq.jpg" width="115%"/>
+          <p>Cloth</p>
+        </div>
+        <div class="column">
+          <img src="/assets/image/shoe_sq.jpg" width="115%"/>
+          <p>Shoes</p>
+        </div>
+        <div class="column">
+          <img src="/assets/image/bag_sq.jpg" width="115%"/>
+          <p>Bag</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="/assets/image/games_sq.jpg" width="115%"/>
+          <p>Games</p>
+        </div>
+        <div class="column">
+          <img src="/assets/image/toy_sq.jpg" width="115%"/>
+          <p>Toy</p>
+        </div>
+        <div class="column">
+          <img src="/assets/image/jew_sq.jpg" width="115%"/>
+          <p>Jewelry</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="ui raised segment">-->
+    <!--<h2>Best Sales</h2>-->
+    <!--<div class="ui grid very padded">-->
+      <!--<div class="eight wide column">-->
+        <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
+        <!--<p>Item 1</p>-->
+      <!--</div>-->
+      <!--<div class="eight wide column">-->
+        <!--<div class="four wide column">-->
+          <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
+          <!--<p>Item 1</p>-->
+        <!--</div>-->
+        <!--<div class="four wide column">-->
+          <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
+          <!--<p>Item 1</p>-->
+        <!--</div>-->
+        <!--<div class="four wide column">-->
+          <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
+          <!--<p>Item 1</p>-->
+        <!--</div>-->
+        <!--<div class="four wide column">-->
+          <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
+          <!--<p>Item 1</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
