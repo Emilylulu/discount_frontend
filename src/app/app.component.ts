@@ -16,6 +16,6 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 // const captionText = document.getElementById('caption');
 // const span = document.getElementsByClassName('close')[0];
 export class AppComponent {
-  images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
-  // myImages = ['dress.jpg', 'shoe.jpg', ];
+  // images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+  // // myImages = ['dress.jpg', 'shoe.jpg', ];
 }
