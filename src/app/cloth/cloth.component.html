@@ -1,0 +1,12 @@
+<div class="ui three column relaxed grid "  style="margin-left: 15px" *ngFor="let clothChunk of clothChunks;">
+  <div class="row ">
+    <div class="column ui segment"  *ngFor="let cloth of clothChunk;">
+
+      <img src={{cloth.imgUrl}} class="fixImageSize"/>
+      <p>{{cloth.title}}</p>
+
+    </div>
+
+  </div>
+
+</div>

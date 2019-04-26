@@ -9,7 +9,11 @@ import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
+<<<<<<< HEAD
 import { FooterComponent } from './footer/footer.component';
+=======
+import { ClothComponent } from './cloth/cloth.component';
+>>>>>>> c03ff4806c9afb7ae15a118ac24c9ec84e1f6075
 
 
 @NgModule({
@@ -18,7 +22,11 @@ import { FooterComponent } from './footer/footer.component';
     ItemComponent,
     HomeComponent,
     NavComponent,
+<<<<<<< HEAD
     FooterComponent
+=======
+    ClothComponent
+>>>>>>> c03ff4806c9afb7ae15a118ac24c9ec84e1f6075
   ],
   imports: [
     BrowserModule,
