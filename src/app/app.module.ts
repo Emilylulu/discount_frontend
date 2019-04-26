@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
+import { ClothComponent } from './cloth/cloth.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { NavComponent } from './nav/nav.component';
     AppComponent,
     ItemComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    ClothComponent
   ],
   imports: [
     BrowserModule,

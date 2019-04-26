@@ -1,0 +1,8 @@
+<div *ngFor="let clothChunk of clothChunks;">
+  <div class="row">
+    <div class="column" *ngFor="let cloth of clothChunk;">
+      <img src={{cloth.imgUrl}} class="fixImageSize"/>
+      <p>{{cloth.title}}</p>
+    </div>
+  </div>
+</div>
