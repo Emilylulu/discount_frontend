@@ -62,12 +62,20 @@
       </div>
     </div>
   </div> -->
+
+<br>
+
+
+  
   <div class="ui container">
   <div class="ui two column doubling stackable grid container">
       <div class="column">
-          <mdb-carousel class="carousel slide carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'">
-              <mdb-carousel-item>
-                <img class="ui huge image" src="assets/image/streamtrain1.png" alt="First slide">
+          <img class="ui large image" src={{list.imgUrl}} alt="First slide">
+          <!-- <mdb-carousel class="carousel slide carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'">
+              <mdb-carousel-item> -->
+                <!-- <img class="ui huge image" src="assets/image/streamtrain1.png" alt="First slide"> -->
+                <!-- <img class="ui huge image" src={{list.imgUrl}} alt="First slide">
+
               </mdb-carousel-item>
               <mdb-carousel-item>
                 <img class="ui large image" src="assets/image/streamtrain2.png" alt="Second slide">
@@ -75,19 +83,19 @@
               <mdb-carousel-item>
                 <img class="ui large image" src="assets/image/streamtrain3.png" alt="Third slide">
               </mdb-carousel-item>
-            </mdb-carousel>
+            </mdb-carousel> -->
       </div>
       <div class="column">
           <div class="content">
       
-              <h2>Steam Train</h2>
+              <h2>{{list.title}}</h2>
               <div class="ui star rating"></div>
 
               <p class="price">original price $59.99</p>
               <div>
               <h3 class="ui red header">
                   <div class="ui red tag large label">Our choice</div>
-                  price $47.99
+                  price ${{list.price}}
                   
               </h3>
               
@@ -96,16 +104,15 @@
             
 
               <ol class="ui list">
-                  <li value="*">Signing Up</li>
-                  <li value="*">User Benefits</li>
-                  <li value="*">User Types
+                  <li value="*" >Brand</li>
+                  <p >{{list.brand}}</p>
+                  <li value="*">Materials</li>
                     <ol>
-                      <li value="-">Admin</li>
-                      <li value="-">Power User</li>
-                      <li value="-">Regular User</li>
+                      <li value="-">---</li>
+                      <li value="-">---</li>
+                      <li value="-">---</li>
                     </ol>
-                  </li>
-                  <li value="*">Deleting Your Account</li>
+                  
                 </ol>
 
                 <div class="ui divided selection list">
@@ -154,6 +161,8 @@
                           <i class="shop icon"></i>
                         </div>
                       </div>
+
+                      
                         
               </div>
               <br>
@@ -177,15 +186,20 @@
 
 
 
+    
+
+
 
   <div class="ui tabular menu">
       <a class="item active" data-tab="first">Description</a>
       <a class="item" data-tab="second">Review</a>
       <a class="item" data-tab="third">Information</a>
     </div>
-    <div class="ui bottom attached tab segment active" data-tab="first">     
-        <ul class="ui list">
-            <li>The LEGO® DUPLO® 10874 Steam Train is now even easier for your toddler to control and interact with in multiple ways.</li>
+    <div class="ui bottom attached tab segment active" data-tab="first">  
+      <p>{{list.description}}</p>   
+        <!-- <ul class="ui list">
+            
+             <li>The LEGO® DUPLO® 10874 Steam Train is now even easier for your toddler to control and interact with in multiple ways.</li>
             <li>Young children can become the train driver with the Push & Go motor — a gentle push either forwards or backwards sends 
                 the train on its way and a firm hold or lift off the tracks will make it stop.</li>
             <li>Benefits
@@ -194,6 +208,7 @@
                     along the track to sound the horn, turn the lights on and off, pause and refuel, change direction and stop the train wherever 
                     they like. 
                      </li>
+                     
                 <li>With a train station, coal tipper, 2 DUPLO figures plus an animal figure and a simple toy train track included in this LEGO DUPLO set, preschoolers can enjoy classic, fun train play.</li>
                 <li>Download the optional app to unlock even more play possibilities, 
                     including remote-control function and fun activities to complete with your toddler!</li>
@@ -206,7 +221,8 @@
           
         <br>
         <a class="item" href="https://shop.lego.com/en-US/product/Steam-Train-10874">Link to Lego</a>
-        </p>
+        </p>  -->
+
       <!-- <div class="ui bulleted list">
                 <div class="item">The LEGO® DUPLO® 10874 Steam Train is now even easier for your toddler to control and interact with in multiple ways. </div>
                 <div class="item">Download the optional app to unlock even more play possibilities, including remote-control function and fun activities to complete with your toddler!</div>
@@ -458,3 +474,15 @@
 
 
 </div>
+
+
+
+       <!-- <div class="column ui segment" >
+  
+        <img src={{list.imgUrl}} class="fixImageSize"/>
+        <p>{{list.title}}</p>
+  
+      </div> -->
+  
+  
+  
