@@ -16,7 +16,7 @@ export class ClothComponent implements OnInit {
   async ngOnInit() {
     try {
       const data = await axios.get(endpoints.ALL_PRODUCT);
-      this.clothChunks = this.chunks(data.data, 3);
+      this.clothChunks = this.chunks(data.data, 4);
       console.table(this.clothChunks);
     } catch (e) {
       // TODO handle get data fail later
