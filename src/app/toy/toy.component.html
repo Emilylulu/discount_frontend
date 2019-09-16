@@ -1,0 +1,12 @@
+<div class="ui four column relaxed grid "  style="margin-left: 15px" *ngFor="let toyChunk of toyChunks;">
+  <div class="row ">
+    <div class="column ui segment"  *ngFor="let toy of toyChunk;">
+
+      <img src={{toy.imgUrl}} class="fixImageSize"/>
+      <p>{{toy.title}}</p>
+
+    </div>
+
+  </div>
+
+</div>

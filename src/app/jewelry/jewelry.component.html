@@ -1,0 +1,12 @@
+<div class="ui four column relaxed grid "  style="margin-left: 15px" *ngFor="let jewelryChunk of jewelryChunks;">
+  <div class="row ">
+    <div class="column ui segment"  *ngFor="let jewelry of jewelryChunk;">
+
+      <img src={{jewelry.imgUrl}} class="fixImageSize"/>
+      <p>{{jewelry.title}}</p>
+
+    </div>
+
+  </div>
+
+</div>

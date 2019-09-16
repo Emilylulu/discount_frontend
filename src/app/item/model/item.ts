@@ -3,7 +3,7 @@ export default class Cloth {
     title: string;
     imgUrl: string;
     id: string;
-  
+
     constructor(price: string, title: string, imgUrl: string, id: string) {
       this.price = price;
       this.title = title;
@@ -11,4 +11,3 @@ export default class Cloth {
       this.id = id;
     }
   }
-  

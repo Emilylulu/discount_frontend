@@ -11,6 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { ClothComponent } from './cloth/cloth.component';
+import { ToyComponent } from './toy/toy.component';
+import { BookComponent } from './book/book.component';
+import { GameComponent } from './game/game.component';
+import { JewelryComponent } from './jewelry/jewelry.component';
+import { PurseComponent } from './purse/purse.component';
 
 
 @NgModule({
@@ -20,7 +25,12 @@ import { ClothComponent } from './cloth/cloth.component';
     HomeComponent,
     NavComponent,
     FooterComponent,
-    ClothComponent
+    ClothComponent,
+    ToyComponent,
+    BookComponent,
+    GameComponent,
+    JewelryComponent,
+    PurseComponent
   ],
   imports: [
     BrowserModule,

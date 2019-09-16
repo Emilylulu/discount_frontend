@@ -3,27 +3,26 @@ import axios from 'axios';
 import endpoints from '../constants/endpoint';
 
 @Component({
-  selector: 'app-cloth',
-  templateUrl: './cloth.component.html',
-  styleUrls: ['./cloth.component.css']
+  selector: 'app-toy',
+  templateUrl: './toy.component.html',
+  styleUrls: ['./toy.component.css']
 })
-export class ClothComponent implements OnInit {
-  clothChunks;
+export class ToyComponent implements OnInit {
 
+  toyChunks;
   constructor() { }
 
   async ngOnInit() {
     try {
-      const data = await axios.get(endpoints.ALL_CLOTHES);
-      this.clothChunks = this.chunks(data.data, 4);
-      console.table(this.clothChunks);
+      const data = await axios.get(endpoints.ALL_TOYS);
+      this.toyChunks = this.chunks(data.data, 4);
+      console.table(this.toyChunks);
     } catch (e) {
       // TODO handle get data fail later
       console.table(`Error connecting with server: ${e}`);
     }
 
   }
-
   chunks = (array, size) => {
     if (array === undefined) {
       return array;
@@ -34,4 +33,5 @@ export class ClothComponent implements OnInit {
     }
     return results;
   }
+
 }

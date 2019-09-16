@@ -1,0 +1,12 @@
+<div class="ui four column relaxed grid "  style="margin-left: 15px" *ngFor="let bookChunk of bookChunks;">
+  <div class="row ">
+    <div class="column ui segment"  *ngFor="let book of bookChunk;">
+
+      <img src={{book.imgUrl}} class="fixImageSize"/>
+      <p>{{book.title}}</p>
+
+    </div>
+
+  </div>
+
+</div>

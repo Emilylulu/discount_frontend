@@ -1,0 +1,12 @@
+<div class="ui four column relaxed grid "  style="margin-left: 15px" *ngFor="let purseChunk of purseChunks;">
+  <div class="row ">
+    <div class="column ui segment"  *ngFor="let purse of purseChunk;">
+
+      <img src={{purse.imgUrl}} class="fixImageSize"/>
+      <p>{{purse.title}}</p>
+
+    </div>
+
+  </div>
+
+</div>
