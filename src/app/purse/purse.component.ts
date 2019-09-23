@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import endpoints from '../constants/endpoint';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-purse',
@@ -9,7 +10,7 @@ import endpoints from '../constants/endpoint';
 })
 export class PurseComponent implements OnInit {
   purseChunks;
-  constructor() { }
+  constructor(private router: Router) { }
 
   async ngOnInit() {
     try {
@@ -20,6 +21,9 @@ export class PurseComponent implements OnInit {
       // TODO handle get data fail later
       console.table(`Error connecting with server: ${e}`);
     }
+  }
+  onSelect(purse) {
+    this.router.navigate(['/item', purse.id]);
   }
 
   chunks = (array, size) => {

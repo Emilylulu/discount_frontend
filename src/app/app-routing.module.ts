@@ -10,7 +10,7 @@ import {JewelryComponent} from './jewelry/jewelry.component';
 import {PurseComponent} from './purse/purse.component';
 
 const routes: Routes = [
-  {path: 'item', component: ItemComponent},
+  {path: 'item/:id', component: ItemComponent},
   {path: '', component: HomeComponent},
   {path: 'cloth', component: ClothComponent},
   {path: 'book', component: BookComponent},

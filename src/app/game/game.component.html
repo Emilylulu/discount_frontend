@@ -2,7 +2,7 @@
   <div class="row ">
     <div class="column ui segment"  *ngFor="let game of gameChunk;">
 
-      <img src={{game.imgUrl}} class="fixImageSize"/>
+      <img src={{game.imgUrl}} (click) = "onSelect(game)" class="fixImageSize"/>
       <p>{{game.title}}</p>
 
     </div>

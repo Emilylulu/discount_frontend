@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import axios from 'axios';
 import endpoints from '../constants/endpoint';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-cloth',
@@ -10,7 +11,7 @@ import endpoints from '../constants/endpoint';
 export class ClothComponent implements OnInit {
   clothChunks;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   async ngOnInit() {
     try {
@@ -22,6 +23,9 @@ export class ClothComponent implements OnInit {
       console.table(`Error connecting with server: ${e}`);
     }
 
+  }
+  onSelect(cloth) {
+    this.router.navigate(['/item', cloth.id]);
   }
 
   chunks = (array, size) => {

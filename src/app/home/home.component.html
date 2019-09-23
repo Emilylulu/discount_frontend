@@ -1,41 +1,41 @@
 <ngb-carousel *ngIf="images">
   <ng-template ngbSlide>
-    <img src="/assets/image/dress.jpg" alt="Random first slide" class="fixSlideSize">
+    <img src="/assets/image/dress.jpg" alt="Random first slide" class="fixSlideSize" routerLink="/cloth" routerLinkActive="active">
     <div class="carousel-caption">
       <h3>Clothes</h3>
       <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <img src="/assets/image/book.png" alt="Random third slide" class="fixSlideSize">
+    <img src="/assets/image/book.png" alt="Random third slide" class="fixSlideSize" routerLink="/book" routerLinkActive="active">
     <div class="carousel-caption">
       <h3>Books</h3>
       <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <img src="/assets/image/bag.png" alt="Random second slide" class="fixSlideSize">
+    <img src="/assets/image/bag.png" alt="Random second slide" class="fixSlideSize" routerLink="/purse" routerLinkActive="active">
     <div class="carousel-caption">
       <h3>Purse</h3>
       <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <img src="/assets/image/game.jpg" alt="Random third slide" class="fixSlideSize">
+    <img src="/assets/image/game.jpg" alt="Random third slide" class="fixSlideSize" routerLink="/game" routerLinkActive="active">
     <div class="carousel-caption">
       <h3>Game</h3>
       <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <img src="/assets/image/toy.jpg" alt="Random third slide" class="fixSlideSize">
+    <img src="/assets/image/toy.jpg" alt="Random third slide" class="fixSlideSize" routerLink="/toy" routerLinkActive="active">
     <div class="carousel-caption">
       <h3>Toy</h3>
       <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <img src="/assets/image/jew.jpg" alt="Random third slide" class="fixSlideSize">
+    <img src="/assets/image/jew.jpg" alt="Random third slide" class="fixSlideSize" routerLink="/jewelry" routerLinkActive="active">
     <div class="carousel-caption">
       <h3>Jewelry</h3>
       <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
@@ -50,24 +50,24 @@
   <div class="ui grid" style="margin-left: 15px">
     <div class="row stretched">
       <div class="eight wide column noPadding">
-        <img src="assets/image/dress.jpg" style="object-fit: fill"/>
+        <img src="assets/image/dress.jpg" style="object-fit: fill" routerLink="/cloth" routerLinkActive="active">
       </div>
       <div class="four wide column noPadding">
-        <img src="assets/image/book_sq.png" style="object-fit: fill"/>
+        <img src="assets/image/book_sq.png" style="object-fit: fill" routerLink="/book" routerLinkActive="active">
       </div>
       <div class="four wide column noPadding">
-        <img src="assets/image/bag_sq.jpg" style="object-fit: fill"/>
+        <img src="assets/image/bag_sq.jpg" style="object-fit: fill" routerLink="/purse" routerLinkActive="active">
       </div>
     </div>
     <div class="row stretched">
       <div class="four wide column noPadding">
-        <img src="assets/image/games_sq.jpg" style="object-fit: fill"/>
+        <img src="assets/image/games_sq.jpg" style="object-fit: fill" routerLink="/game" routerLinkActive="active">
       </div>
       <div class="four wide column noPadding">
-        <img src="assets/image/toy_sq.jpg" style="object-fit: fill"/>
+        <img src="assets/image/toy_sq.jpg" style="object-fit: fill" routerLink="/toy" routerLinkActive="active">
       </div>
       <div class="eight wide column noPadding">
-        <img src="assets/image/jew.jpg" style="object-fit: fill"/>
+        <img src="assets/image/jew.jpg" style="object-fit: fill" routerLink="/jewelry" routerLinkActive="active">
       </div>
     </div>
   </div>
@@ -82,60 +82,31 @@
     <div class="ui three column wide grid" style="margin-left: 15px">
       <div class="row">
         <div class="column">
-          <img src="/assets/image/dress_sq.jpg" width="115%"/>
+          <img src="/assets/image/dress_sq.jpg" width="115%" routerLink="/cloth" routerLinkActive="active">
           <p>Cloth</p>
         </div>
         <div class="column">
-          <img src="/assets/image/book_sq.png" width="115%"/>
+          <img src="/assets/image/book_sq.png" width="115%" routerLink="/book" routerLinkActive="active">
           <p>Books</p>
         </div>
         <div class="column">
-          <img src="/assets/image/bag_sq.jpg" width="115%"/>
+          <img src="/assets/image/bag_sq.jpg" width="115%" routerLink="/purse" routerLinkActive="active">
           <p>Bag</p>
         </div>
       </div>
       <div class="row">
         <div class="column">
-          <img src="/assets/image/games_sq.jpg" width="115%"/>
+          <img src="/assets/image/games_sq.jpg" width="115%" routerLink="/game" routerLinkActive="active">
           <p>Games</p>
         </div>
         <div class="column">
-          <img src="/assets/image/toy_sq.jpg" width="115%"/>
+          <img src="/assets/image/toy_sq.jpg" width="115%" routerLink="/toy" routerLinkActive="active">
           <p>Toy</p>
         </div>
         <div class="column">
-          <img src="/assets/image/jew_sq.jpg" width="115%"/>
+          <img src="/assets/image/jew_sq.jpg" width="115%" routerLink="/jewelry" routerLinkActive="active">
           <p>Jewelry</p>
         </div>
       </div>
     </div>
   </div>
-
-  <!--<div class="ui raised segment">-->
-    <!--<h2>Best Sales</h2>-->
-    <!--<div class="ui grid very padded">-->
-      <!--<div class="eight wide column">-->
-        <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
-        <!--<p>Item 1</p>-->
-      <!--</div>-->
-      <!--<div class="eight wide column">-->
-        <!--<div class="four wide column">-->
-          <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
-          <!--<p>Item 1</p>-->
-        <!--</div>-->
-        <!--<div class="four wide column">-->
-          <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
-          <!--<p>Item 1</p>-->
-        <!--</div>-->
-        <!--<div class="four wide column">-->
-          <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
-          <!--<p>Item 1</p>-->
-        <!--</div>-->
-        <!--<div class="four wide column">-->
-          <!--<img src="http://ecx.images-amazon.com/images/I/51fAmVkTbyL._SY300_.jpg" width="100%"/>-->
-          <!--<p>Item 1</p>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-

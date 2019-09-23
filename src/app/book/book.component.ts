@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import endpoints from '../constants/endpoint';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-book',
@@ -10,7 +11,7 @@ import endpoints from '../constants/endpoint';
 export class BookComponent implements OnInit {
   bookChunks;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   async ngOnInit() {
     try {
@@ -21,6 +22,9 @@ export class BookComponent implements OnInit {
       // TODO handle get data fail later
       console.table(`Error connecting with server: ${e}`);
     }
+  }
+  onSelect(book) {
+    this.router.navigate(['/item', book.id]);
   }
 
   chunks = (array, size) => {

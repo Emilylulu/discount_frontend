@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import axios from 'axios';
 import endpoints from '../constants/endpoint';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-toy',
@@ -10,7 +11,7 @@ import endpoints from '../constants/endpoint';
 export class ToyComponent implements OnInit {
 
   toyChunks;
-  constructor() { }
+  constructor(private router: Router) { }
 
   async ngOnInit() {
     try {
@@ -21,7 +22,9 @@ export class ToyComponent implements OnInit {
       // TODO handle get data fail later
       console.table(`Error connecting with server: ${e}`);
     }
-
+  }
+  onSelect(toy) {
+    this.router.navigate(['/item', toy.id]);
   }
   chunks = (array, size) => {
     if (array === undefined) {

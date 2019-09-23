@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import endpoints from '../constants/endpoint';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-game',
@@ -10,7 +12,7 @@ import endpoints from '../constants/endpoint';
 export class GameComponent implements OnInit {
 
   gameChunks;
-  constructor() { }
+  constructor(private router: Router) { }
 
   async ngOnInit() {
     try {
@@ -21,6 +23,9 @@ export class GameComponent implements OnInit {
       // TODO handle get data fail later
       console.table(`Error connecting with server: ${e}`);
     }
+  }
+  onSelect(game) {
+    this.router.navigate(['/item', game.id]);
   }
 
   chunks = (array, size) => {

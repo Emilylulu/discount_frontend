@@ -2,7 +2,7 @@
   <div class="row ">
     <div class="column ui segment"  *ngFor="let cloth of clothChunk;">
 
-      <img src={{cloth.imgUrl}} class="fixImageSize"/>
+      <img src={{cloth.imgUrl}} (click) = "onSelect(cloth)" class="fixImageSize"/>
       <p>{{cloth.title}}</p>
 
     </div>
