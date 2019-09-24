@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SystemJsNgModuleLoader } from '@angular/core';
 
 import axios from 'axios';
-import Cloth from './model/item';
+import ItemDetail from './model/item';
 import endpoints from '../constants/endpoint';
 import { detectChangesInternal } from '@angular/core/src/render3/instructions';
 import { detachEmbeddedView } from '@angular/core/src/view';
-
-
+import {ActivatedRoute} from '@angular/router';
+import {Observable, Subscription} from 'rxjs';
 
 declare var $:any;
 @Component({
@@ -28,12 +28,24 @@ export class ItemComponent implements OnInit {
 
     }
     list;
-    constructor() { }
+    //constructor() { }
     
-    
+    private routeSub: Subscription;
+    constructor(private route: ActivatedRoute) { }
     async ngOnInit() {
+      var id;
+
+      this.routeSub = this.route.params.subscribe(params => {
+
+        console.log(params) //log the entire params object
+        console.log(params['id']) //log the value of id
+        id = params['id'];
+
+        
+      });
       try {
-        this.list = await axios.get(endpoints.ONE_ITEM).then(function(response){
+
+        this.list = await axios.get(endpoints.ONE_ITEM + id).then(function(response){
           
             var detail;
             detail = response.data;
@@ -54,23 +66,12 @@ export class ItemComponent implements OnInit {
       
     }
 
+    ngOnDestroy() {
+      this.routeSub.unsubscribe();
+    }
+
     
-      /*const user = axios.get(endpoints.ONE_ITEM)
-      .then(function (response) {
-        //console.log(response);
-        //this.productdata = response.data.title;
-        //console.log(response.data);
-        this.list = response.data;
-        console.log(this.list);
 
-        return this.list;
-        
-
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-      */
 
       
 

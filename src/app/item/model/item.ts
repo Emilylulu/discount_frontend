@@ -1,4 +1,4 @@
-export default class Cloth {
+export default class ItemDetail {
     price: string;
     title: string;
     imgUrl: string;
