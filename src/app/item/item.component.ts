@@ -28,6 +28,7 @@ export class ItemComponent implements OnInit {
 
     }
     list;
+    reviewList;
     //constructor() { }
     
     private routeSub: Subscription;
@@ -53,34 +54,78 @@ export class ItemComponent implements OnInit {
             
             return detail;
 
-        }
+        });
+        
+      } catch (e) {
+        // TODO handle get data fail later
+        console.table(`Error connecting with server: ${e}`);
+      }
+
+      try {
+
+      
+    
+        const review = await axios.get(endpoints.REVIEW + id);
+        this.reviewList = this.chunks(review.data, 20);
+          // var review;
+          // review = response.data;
+          // console.log(response.data.reviewText);
+          
+          // return review;
+  
+      //}
         
           
-
-        );
+  
+        //);
+  
       } catch (e) {
         // TODO handle get data fail later
         console.table(`Error connecting with server: ${e}`);
       }
       console.log(this.list.title);
-      
     }
+      //console.log(this.list.title);
+      
+    
+  
+    // ngOnDestroy() {
+    //   this.routeSub.unsubscribe();
+    // }
+    chunks = (array, size) => {
+      if (array === undefined) {
+        return array;
+      }
+      const results = [];
+      while (array.length) {
+        results.push(array.splice(0, size));
+      }
+      return results;
+    }
+      // try{
+      //   this.review = await axios.get(endpoints.REVIEW + id).then(function(response){
+          
+      //     var review;
+      //     review = response.data;
+      //     console.log(response.data.reviewText);
+          
+      //     return review;
+
+      // }
+        
+          
+
+      //   );
+
+      // } catch (e) {
+      //   // TODO handle get data fail later
+      //   console.table(`Error connecting with server: ${e}`);
+      // }
+      
+      
+    
 
     ngOnDestroy() {
       this.routeSub.unsubscribe();
     }
-
-    
-
-
-      
-
-      
-      
-      
-
-  
-   
-  
-  
-}
+  }

@@ -16,6 +16,8 @@ import { BookComponent } from './book/book.component';
 import { GameComponent } from './game/game.component';
 import { JewelryComponent } from './jewelry/jewelry.component';
 import { PurseComponent } from './purse/purse.component';
+import { ReviewComponent } from './review/review.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { PurseComponent } from './purse/purse.component';
     BookComponent,
     GameComponent,
     JewelryComponent,
-    PurseComponent
+    PurseComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

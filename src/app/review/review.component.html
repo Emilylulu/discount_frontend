@@ -1,0 +1,13 @@
+<div class="ui four column relaxed grid "  style="margin-left: 15px" *ngFor="let reviews of reviewList;">
+    <div class="row ">
+      <div class="column ui segment"  *ngFor="let review of reviews;">
+  
+        <!-- <img src={{cloth.imgUrl}} (click) = "onSelect(cloth)" class="fixImageSize"/> -->
+        <p>{{review.reviewText}}</p>
+  
+      </div>
+  
+    </div>
+  
+  </div>
+  

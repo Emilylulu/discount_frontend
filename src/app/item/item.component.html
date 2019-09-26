@@ -70,7 +70,7 @@
   <div class="ui container">
   <div class="ui two column doubling stackable grid container">
       <div class="column">
-          <img class="ui large image" src={{list.imgUrl}} alt="First slide">
+          <img class="ui large image" src={{list.imgUrl}} alt="First slide" >
           <!-- <mdb-carousel class="carousel slide carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'">
               <mdb-carousel-item> -->
                 <!-- <img class="ui huge image" src="assets/image/streamtrain1.png" alt="First slide"> -->
@@ -87,7 +87,7 @@
       </div>
       <div class="column">
           <div class="content">
-      
+               
               <h2>{{list.title}}</h2>
               <div class="ui star rating"></div>
 
@@ -197,78 +197,29 @@
     </div>
     <div class="ui bottom attached tab segment active" data-tab="first">  
       <p>{{list.description}}</p>   
-        <!-- <ul class="ui list">
-            
-             <li>The LEGO® DUPLO® 10874 Steam Train is now even easier for your toddler to control and interact with in multiple ways.</li>
-            <li>Young children can become the train driver with the Push & Go motor — a gentle push either forwards or backwards sends 
-                the train on its way and a firm hold or lift off the tracks will make it stop.</li>
-            <li>Benefits
-              <ul>
-                <li>Help them place the 5 colored action bricks 
-                    along the track to sound the horn, turn the lights on and off, pause and refuel, change direction and stop the train wherever 
-                    they like. 
-                     </li>
-                     
-                <li>With a train station, coal tipper, 2 DUPLO figures plus an animal figure and a simple toy train track included in this LEGO DUPLO set, preschoolers can enjoy classic, fun train play.</li>
-                <li>Download the optional app to unlock even more play possibilities, 
-                    including remote-control function and fun activities to complete with your toddler!</li>
-              </ul>
-            </li>
-            <li>Warranty</li>
-          </ul>
-      
-      <p> 
-          
-        <br>
-        <a class="item" href="https://shop.lego.com/en-US/product/Steam-Train-10874">Link to Lego</a>
-        </p>  -->
-
-      <!-- <div class="ui bulleted list">
-                <div class="item">The LEGO® DUPLO® 10874 Steam Train is now even easier for your toddler to control and interact with in multiple ways. </div>
-                <div class="item">Download the optional app to unlock even more play possibilities, including remote-control function and fun activities to complete with your toddler!</div>
-                <div class="item">
-                  <div>Features</div>
-                  <div class="list">
-                    <a class="item" href="https://shop.lego.com/en-US/product/Steam-Train-10874">Link to Lego</a>
-                    <div class="item">Includes train driver and child LEGO® DUPLO® figures, plus a squirrel figure.
-                    </div>
-                    <div class="item">Accessory elements include a refueling can, suitcase, bread and a spade.</div>
-                  </div>
-                </div>
-                <div class="item">Warranty</div>
-               -->
-              </div>
+    </div>
 
     <div class="ui bottom attached tab segment" data-tab="second">
-        <div class="ui comments">
-          <div class="comment">
+        <div class="ui comments" *ngFor="let reviews of reviewList;">
+          <div class="comment" *ngFor="let review of reviews;">
             <a class="avatar">
               <img src="/assets/image/matthew.png">
             </a>
             <div class="content">
-              <a class="author">Joe Henderson</a>
+              <a class="author">{{review.reviewerName}}</a>
               <div class="metadata">
-                <div class="date">1 day ago</div>
+                <div class="date">{{review.reviewTime}}</div>
               </div>
+              <div class="ui star rating" data-rating="3"></div>
+
               <div class="text">
-                <p>TSanta gave my 18mo this for Christmas. It is simple to set up and use.
-       
-                    We bought it so that our older son could play together with youngest. Works perfectly for that.
-                    
-                    Making the set is easy, i’d recommend getting extra sets so there’s more track.
-                    
-                    App Set up is easy and straightforward and worked straight away on our Apple devices (IoS 12)
-                    
-                    Youngest loves the push and go so no app needed. Our 4yo loves the app and the extra interactive games.
-                    
-                    We had a lot of old style black track from years ago, it works perfectly with that. Ths only issue is the old style bridge doesn’t have enough grip. This was fixed with a thin wipe of PVA of the track surface! We now have a hump back bridge!</p>
-              </div>
+                          <p>{{review.reviewText}}</p>
               <div class="actions">
                 <a class="reply">Reply</a>
               </div>
             </div>
           </div>
-          <div class="comment">
+          <!-- <div class="comment">
             <a class="avatar">
               <img src="/assets/image/helen.jpg">
             </a>
@@ -286,8 +237,8 @@
                 <a class="reply">Reply</a>
               </div>
             </div>
-          </div>
-          <form class="ui reply form">
+          </div> -->
+          <!-- <form class="ui reply form">
             <div class="field">
               <textarea></textarea>
             </div>
@@ -297,9 +248,22 @@
             <div class="ui primary submit labeled icon button">
               <i class="icon edit"></i> Add Comment
             </div>
-          </form>
+          </form> -->
         </div>
+       
       </div>
+      <form class="ui reply form">
+          <div class="field">
+            <textarea></textarea>
+          </div>
+          
+    
+          
+          <div class="ui primary submit labeled icon button">
+            <i class="icon edit"></i> Add Comment
+          </div>
+        </form>
+    </div>
         
     <div class="ui bottom attached tab segment" data-tab="third">
 
@@ -475,14 +439,5 @@
 
 </div>
 
-
-
-       <!-- <div class="column ui segment" >
-  
-        <img src={{list.imgUrl}} class="fixImageSize"/>
-        <p>{{list.title}}</p>
-  
-      </div> -->
-  
   
   

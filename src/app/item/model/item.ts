@@ -3,6 +3,7 @@ export default class ItemDetail {
     title: string;
     imgUrl: string;
     id: string;
+    
 
     constructor(price: string, title: string, imgUrl: string, id: string) {
       this.price = price;

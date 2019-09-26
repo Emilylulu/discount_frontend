@@ -8,6 +8,7 @@ import {BookComponent} from './book/book.component';
 import {GameComponent} from './game/game.component';
 import {JewelryComponent} from './jewelry/jewelry.component';
 import {PurseComponent} from './purse/purse.component';
+import{ReviewComponent} from './review/review.component';
 
 const routes: Routes = [
   {path: 'item/:id', component: ItemComponent},
@@ -17,7 +18,9 @@ const routes: Routes = [
   {path: 'game', component: GameComponent},
   {path: 'purse', component: PurseComponent},
   {path: 'jewelry', component: JewelryComponent},
-  {path: 'toy', component: ToyComponent}
+  {path: 'toy', component: ToyComponent},
+  {path: 'review', component: ReviewComponent}
+
 
 ];
 
